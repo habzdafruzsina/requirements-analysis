@@ -1,28 +1,52 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
-\usepackage{draftwatermark}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
+\usepackage[tablegrid,nochapter]{vhistory} %%Vhistory simplifies the creation of a history of versions of a document
+\usepackage[nottoc]{tocbibind} %%Automatically adds the bibliography and/or the index and/or the contents, etc., to the Table of Contents listing
+\usepackage{authblk}
+\usepackage{float}
+\usepackage[raggedrightboxes]{ragged2e}
 
-\SetWatermarkText{Minta}
-\SetWatermarkFontSize{4cm}
-\SetWatermarkScale{5}
-\sloppy
 
-\title{Projektcím}
-\author{írok}
-\date{November 2023}
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\counterwithin{table}{subsection}
+
+\def\BoldTitle{Követelményelemzés}
+\def\Subtitle{Élő LEGO Projekt Irányításához\\}
+
+\title{\textbf{\BoldTitle}\\\Subtitle}
+
+\author{\textsc{\Large Projektvezető: Németh Gábor Árpád} \\ \textsc{Csapat tagjai:} Habzda Fruzsina Mária Horváth Sára, Kemény Dániel, Kiss Ámon, Novák Lilla, Racskó Balázs, Székely Szilárd, Torvinen Aili, Tóth Dóra, Vágó Blanka}
+
+\date{\today}
 
 \begin{document}
 
 \maketitle
 
+\pagebreak
+\tableofcontents % Inhaltsverzeichnis
+
+\pagebreak
 \section{Revision History}
-(ki mit csinált, mondjuk ezt a részét kevéssé értem...)
 
-\maketitle
+\begin{versionhistory}
+    \vhEntry{1.0}{2023. November 3.}{Habzda Fruzsina Mária}{Első vázlat}
+    \vhEntry{1.1}{2023. November 23.}{Novák Lilla}{A vázlat kibővítése és részekre osztása}
+\end{versionhistory}
 
+
+\pagebreak
 \section{Projekt bemutatása}
+
 (összefoglaló ezekről, kb 1 oldal;
 miről szól a projekt?
 kinek a számára készül?
@@ -39,43 +63,66 @@ rizikók)
 \item felsorolás2
 \end{itemize}
 
-\maketitle
 
+\pagebreak
 \section{Követelmények}
 
-\subsection{XY1 Követelménycsoport}
+követelmények számozása és felépítése (hogyan épül fel egy azonosító; követelménycsoport-id)
+a megvalósítás fázisai (fázisok felsorolása, rövid leírása, követelményeik, időtartama) 
+XY1 követelmény csoport követelményei (követelmények táblázatos leírása, azonosító, leírás)
+XY2 ...
 
+\subsection{*programozási felületek*}
 
-- követelmények számozása és felépítése
-(hogyan épül fel egy azonosító; követelménycsoport-id)
+(valami bevezető szöveg az adott részhez)
 
-- a megvalósítás fázisai
-(fázisok felsorolása, rövid leírása, követelményeik, időtartama)
+\subsubsection{*programozóknak*}
 
-- XY1 követelmény csoport követelményei
-(követelmények táblázatos leírása, azonosító, leírás)
+(itt is valami bevezető szöveg az adott részhez)
 
-- xY2 ...
-
-
-\begin{tabular}{ |c|c| }
-    \hline
-    Azonosító & Leírás \\
-    \hline\hline
-    azonosító1 & leírás1....... \\
-    \hline
-    azonosító2 & leírás2....... \\
-    \hline
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|p{14cm}|}
+\hline
+\textbf{Azonosító} & \textbf{Leírás}        \\ 
+\hline
+       azonosító1  & Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis nibh non sapien consequat ultricies. Phasellus in dapibus mauris. Nam consectetur tempus posuere. Fusce luctus ac magna quis maximus. Donec a arcu porttitor, blandit orci quis, suscipit justo. Aliquam scelerisque lobortis ornare. Praesent vel lorem eget mi vehicula elementum. Fusce dignissim nisl ut sem lobortis gravida. Quisque non erat porta, maximus nisi sed, hendrerit enim. In sollicitudin sollicitudin tempor. Duis ut mattis tellus. Maecenas velit purus, ultrices quis accumsan eu, interdum quis urna. In hac habitasse platea dictumst. Fusce ornare lectus orci, ut imperdiet ligula efficitur vel. Cras condimentum est a blandit fermentum. Nam placerat lobortis risus, non cursus magna tempor in. Donec fringilla posuere eros eget tristique. \\
+\hline
 \end{tabular}
+\caption{táblázat leírása}
+\label{table:my_label}
+\end{table}
+
+\subsubsection{*drag and drop felület*}
+
+(itt is valami bevezető szöveg az adott részhez)
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|p{14cm}|}
+\hline
+\textbf{Azonosító} & \textbf{Leírás}        \\ 
+\hline
+       azonosító1  & Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis nibh non sapien consequat ultricies. Phasellus in dapibus mauris. Nam consectetur tempus posuere. Fusce luctus ac magna quis maximus. Donec a arcu porttitor, blandit orci quis, suscipit justo. Aliquam scelerisque lobortis ornare. Praesent vel lorem eget mi vehicula elementum. Fusce dignissim nisl ut sem lobortis gravida. Quisque non erat porta, maximus nisi sed, hendrerit enim. In sollicitudin sollicitudin tempor. Duis ut mattis tellus. Maecenas velit purus, ultrices quis accumsan eu, interdum quis urna. In hac habitasse platea dictumst. Fusce ornare lectus orci, ut imperdiet ligula efficitur vel. Cras condimentum est a blandit fermentum. Nam placerat lobortis risus, non cursus magna tempor in. Donec fringilla posuere eros eget tristique. \\
+\hline
+\end{tabular}
+\caption{táblázat leírása}
+\label{table:my_label}
+\end{table}
+
+\subsection{*távirányítók*}
+\subsubsection{*fizikai*}
+\subsubsection{*app*}
+
+\subsection{*weboldal*}
+\subsubsection{*megosztás*}
+\subsubsection{*dokumentáció*}
 
 
-
-\maketitle
-
+\pagebreak
 \section{Szójegyzék}
 
 (szavak csoportosítva, definíciókkal ellátva)
-
 
 
 \end{document}

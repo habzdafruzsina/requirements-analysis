@@ -153,8 +153,80 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \end{table}
 
 \subsection{*távirányítók*}
+\subsubsection{Fizikai Távirányítás}
+\subsubsection{Felület terv}
+\includegraphics[Felületterv]{fizikaitavir_feluletter.png}
 
-\subsubsection{*fizikai*}
+\subsubsection{Funkciók}
+\begin{itemize}
+    \item Funkciógombok
+    \begin{itemize}
+        \item Előre meghatározott funkciókat indítanak el, amennyiben az adott funkciót támogatja a jelenleg kapcsolódott vezérlő egység.
+        \item Tíz darab, 0-9-ig számozva.
+        \item Megnyomásra a kijelzőn az aktuálisan kiválasztott vezérlőegység kódja mellett megjelenik a funkció sorszáma is.
+    \end{itemize}
+
+    \item Analóg szabályzó
+    \begin{itemize}
+        \item Folytonos állású körbetekerhető kapcsoló.
+        \item Funkciótól függően különböző dolgokat szabályoz. (Pl.: sebesség, fényerő stb)
+        \item Tekerés közben 3 másodpercig a kijelzőn megjelenik a jelenleg választott érték, az adott funkció értéktartományától függően.
+        \item 1 teljes körbetekerés 100 egység.
+    \end{itemize}
+    
+    \item LCD Kijelző
+    \begin{itemize}
+        \item Minden információ itt jelenik meg.
+        \item Alapesetben a kiválsaztott vezérlő 7 jegyű kódja és a funkció sorszáma van kijelezve. 
+        \item Alacsony akkufeszültség esetén “LOW BATT” jelzést mutat, felváltva villog az alap kiválasztással.
+        \item Kiválasztott vezérlő nélkül “NO SIGN” jelzés látható.
+    \end{itemize}
+    
+    \item "Cím" gomb
+    \begin{itemize}
+        \item Aktuálisan vezérelt egységek közötti váltógomb
+    \end{itemize}
+    
+    \item Shift gomb
+    \begin{itemize}
+        \item További funkciók elérése 10-19ig a megfelelő funkciógomb megnyomásával. 
+    \end{itemize}
+    
+    \item On-Off Kapcsoló
+    \begin{itemize}
+        \item Kétállású váltókapcsoló
+        \item A távirányító ki-be kapcsolására alkalmas gomb.
+        \item Kikapcsoláskor a Bluetooth kapcsolat is megszakad, így a jelenleg futó funkció leáll
+        \item Bekapcsoláskor alapértelmezésben nem kapcsolódik vezérlőegységhez, 0-s funkció kerül kiválasztásra.
+
+    \end{itemize}
+    
+\end{itemize}
+
+\subsubsection{Anyaghasználat}
+    \begin{itemize}
+        \item 100\% ABS Műanyag
+    \end{itemize}
+
+
+\subsubsection{Kapcsolódási specifikáció}
+\begin{itemize}
+    \item Bluetooth 2.0 szabvány szerint
+    \item 100m hatótávolság
+    \item Ezen a kapcsolódási módon keresztül lehetőség a távirányító firmwarejének frissítésére, applikáción keresztül.
+\end{itemize}
+
+\subsubsection{Energiaellátás}
+\begin{itemize}
+    \item AAA elem (vagy akkumulátor), 2db (Nem tartozék)
+    \item Működési feszültség 3V
+\end{itemize}
+
+\subsubsection{Biztonsági tudnivalók}
+\begin{itemize}
+    \item EU Szabványnak megfelelő termék
+    \item 8+ (Nyolc éves kortól használható)
+\end{itemize}
 
 \subsubsection{Telefonos applikáció követelményei}
 

@@ -43,7 +43,8 @@
     \vhEntry{1.0}{2023. November 3.}{Habzda Fruzsina Mária}{Első vázlat}
     \vhEntry{1.1}{2023. November 23.}{Novák Lilla}{A vázlat kibővítése és részekre osztása}
     \vhEntry{1.2}{2023. November 30.}{Tóth Dóra, Székely Szilárd}{Asztali, gyerekeknek szánt alkalmazás követelményeinek megadása}
-    \vhEntry{1.3}{2023. November 30.}{Novák Lilla}{Telefonos távirányító alkalmazás követelményeinek megadása}
+    \vhEntry{1.3}{2023. November 30.}{Horváth Sára, Novák Lilla}{Telefonos távirányító alkalmazás követelményeinek megadása}
+    \vhEntry{1.4}{2023. December  1.}{Racskó Balázs, Vágó Blanka}{Fizikai távirányító követelményeinek megadása}
 \end{versionhistory}
 
 
@@ -73,7 +74,15 @@ rizikók)
 követelmények számozása és felépítése (hogyan épül fel egy azonosító; követelménycsoport-id)
 a megvalósítás fázisai (fázisok felsorolása, rövid leírása, követelményeik, időtartama) 
 XY1 követelmény csoport követelményei (követelmények táblázatos leírása, azonosító, leírás)
-XY2 ...
+XY2 ... \\
+\\
+\textit{(csak egy ötlet)} \\
+C++ Programozási Felület - P \\
+Grafikus Szerkesztő - G \\
+Fizikai Távirányító - T \\
+Mobilalkalmazás Távirányító - A \\
+Webes Megosztás - W \\
+Dokumentációs Anyag - D \\
 
 \subsection{*programozási felületek*}
 
@@ -83,18 +92,20 @@ XY2 ...
 
 (itt is valami bevezető szöveg az adott részhez)
 
-\begin{table}[htbp]
+\begingroup
 \centering
-\begin{tabular}{|c|p{14cm}|}
+\begin{longtable}{|c|p{14cm}|}
 \hline
 \textbf{Azonosító} & \textbf{Leírás}        \\ 
 \hline
-       azonosító1  & Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis nibh non sapien consequat ultricies. Phasellus in dapibus mauris. Nam consectetur tempus posuere. Fusce luctus ac magna quis maximus. Donec a arcu porttitor, blandit orci quis, suscipit justo. Aliquam scelerisque lobortis ornare. Praesent vel lorem eget mi vehicula elementum. Fusce dignissim nisl ut sem lobortis gravida. Quisque non erat porta, maximus nisi sed, hendrerit enim. In sollicitudin sollicitudin tempor. Duis ut mattis tellus. Maecenas velit purus, ultrices quis accumsan eu, interdum quis urna. In hac habitasse platea dictumst. Fusce ornare lectus orci, ut imperdiet ligula efficitur vel. Cras condimentum est a blandit fermentum. Nam placerat lobortis risus, non cursus magna tempor in. Donec fringilla posuere eros eget tristique. \\
+       \textbf{P\_00}  & … \\\hline
+       \textbf{P\_00}  & … \\\hline
+       \textbf{P\_00}  & … \\\hline
 \hline
-\end{tabular}
-\caption{táblázat leírása}
-\label{table:my_label}
-\end{table}
+\caption{C++ programozási felület követelményei}
+\end{longtable}
+\endgroup
+
 
 \subsubsection{Alkalmazás követelményei}
 
@@ -113,24 +124,24 @@ A bal oldalon található panelon számos programozási elem, mint például cik
 Az oldal alján, a Programkód megjelenítőben a felhasználók által összeállított programok jelennek meg C++ formátumban. Ez az ablak segít a felhasználóknak megérteni a programozás logikáját és struktúráját, miközben átlépnek a vizuális programozásról a kódolás gyakorlatába.
 \end{itemize}
 
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{gyerekeknek-felulet.png}
 \caption{\label{fig:image}Gyerekeknek felület}
 \end{figure}
 
-\begin{table}[htbp]
+\begingroup
 \centering
-\begin{tabular}{|c|p{14cm}|}
+\begin{longtable}{|c|p{14cm}|}
 \hline
 \textbf{Azonosító} & \textbf{Leírás}        \\ 
 \hline
-\textbf{A\_01} & Az alkalmazásnak lehetőséget kell biztosítania a lokális fájlok tárolására a vezérlőegységen belül, korlátozva a maximális 1GB tárhelyigényt. Későbbi fejlesztések során az alkalmazásnak támogatnia kell a fájlok megosztási lehetőségeit és a felhőalapú tárolást a további bővíthetőség érdekében \\\hline
-\textbf{A\_02} & Az alkalmazásnak lehetőséget kell biztosítania a felhasználók számára a programjaik megosztására egy beépített fórum felületen keresztül. Ezen a fórumon a felhasználók megoszthatják saját kódjaikat, segítséget kérhetnek vagy értékeléseket adhatnak mások programjaira, lehetővé téve a közösségi tapasztalatok és segítségnyújtás megosztását a felhasználók között. \\\hline
-\textbf{A\_03} & A programozói felületnek böngésző alapúnak kell lennie, támogatva a legelterjedtebb böngészőket: Chrome, Firefox, Safari, valamint Edge-t. Ennek révén biztosítva van a kompatibilitás és az optimális működés a felhasználók széles körű böngészőválasztéka esetén.\\\hline
-\textbf{A\_04} & Az oldal tetején elhelyezkedő menürendszernek biztosítania kell a fájlok kezelését és egyéb fájlalapú műveleteket. Ennek részeként tartalmaznia kell olyan menüpontokat, mint a "File", "Edit", "View", "Help", valamint a jobb sarokban a felhasználó felhasználóneve. Ezek a menüpontok segítséget nyújtanak a fájlok mentéséhez, betöltéséhez és egyéb fájlalapú műveletek elvégzéséhez. \\\hline
-\textbf{A\_05} & A jobb oldalon elhelyezkedő panel funkciójának ki kell terjednie az elemek részletes beállításaira. Ezen a felületen a felhasználóknak lehetőséget kell biztosítani arra, hogy az egyes elemek specifikus tulajdonságait és paramétereit testre szabhassák. Ennek révén a felhasználóknak képesnek kell lenniük részletesen finomhangolni az elemek működését és megjelenését, továbbá lehetőséget kell adni a funkcionalitás bővítésére a programokban. Az elemek részletes konfigurálhatósága növeli a rugalmasságot és segíti a felhasználókat az alkalmazásban való hatékonyabb és testreszabottabb munkavégzésben. \\\hline
-\textbf{A\_06} & A bal oldalon található panelen elérhetőnek kell lennie a következő programozási elemeknek:
+\textbf{G\_01} & Az alkalmazásnak lehetőséget kell biztosítania a lokális fájlok tárolására a vezérlőegységen belül, korlátozva a maximális 1GB tárhelyigényt. Későbbi fejlesztések során az alkalmazásnak támogatnia kell a fájlok megosztási lehetőségeit és a felhőalapú tárolást a további bővíthetőség érdekében \\\hline
+\textbf{G\_02} & Az alkalmazásnak lehetőséget kell biztosítania a felhasználók számára a programjaik megosztására egy beépített fórum felületen keresztül. Ezen a fórumon a felhasználók megoszthatják saját kódjaikat, segítséget kérhetnek vagy értékeléseket adhatnak mások programjaira, lehetővé téve a közösségi tapasztalatok és segítségnyújtás megosztását a felhasználók között. \\\hline
+\textbf{G\_03} & A programozói felületnek böngésző alapúnak kell lennie, támogatva a legelterjedtebb böngészőket: Chrome, Firefox, Safari, valamint Edge-t. Ennek révén biztosítva van a kompatibilitás és az optimális működés a felhasználók széles körű böngészőválasztéka esetén.\\\hline
+\textbf{G\_04} & Az oldal tetején elhelyezkedő menürendszernek biztosítania kell a fájlok kezelését és egyéb fájlalapú műveleteket. Ennek részeként tartalmaznia kell olyan menüpontokat, mint a "File", "Edit", "View", "Help", valamint a jobb sarokban a felhasználó felhasználóneve. Ezek a menüpontok segítséget nyújtanak a fájlok mentéséhez, betöltéséhez és egyéb fájlalapú műveletek elvégzéséhez. \\\hline
+\textbf{G\_05} & A jobb oldalon elhelyezkedő panel funkciójának ki kell terjednie az elemek részletes beállításaira. Ezen a felületen a felhasználóknak lehetőséget kell biztosítani arra, hogy az egyes elemek specifikus tulajdonságait és paramétereit testre szabhassák. Ennek révén a felhasználóknak képesnek kell lenniük részletesen finomhangolni az elemek működését és megjelenését, továbbá lehetőséget kell adni a funkcionalitás bővítésére a programokban. Az elemek részletes konfigurálhatósága növeli a rugalmasságot és segíti a felhasználókat az alkalmazásban való hatékonyabb és testreszabottabb munkavégzésben. \\\hline
+\textbf{G\_06} & A bal oldalon található panelen elérhetőnek kell lennie a következő programozási elemeknek:
 \begin{itemize}
     \item Ciklusok és elágazások
     \item Hangvezérlő modulok
@@ -140,24 +151,44 @@ Az oldal alján, a Programkód megjelenítőben a felhasználók által összeá
 
 Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell lenniük, ezért egy lenyíló listában kell elhelyezkedniük, lehetővé téve a felhasználók számára azok egyszerű húzását és elhelyezését a fő felületre a programok építése során.\\\hline
 
-\textbf{A\_07} & A vizuális elemek alakzatok formájában jelennek meg és különböző színekkel rendelkeznek, hogy a gyerekek számára könnyen használható legyen. \\\hline
-\textbf{A\_08} & Az oldal alján található Programkód megjelenítő felületen kell megjeleníteni a felhasználók által összeállított programokat C++ formátumban. Ez az ablak fontos szerepet tölt be azzal, hogy segítse a felhasználókat a programozás logikájának és struktúrájának megértésében, miközben átmennek a vizuális programozásból a kódolás gyakorlatába. A megjelenítő felületnek pontosan és érthetően kell bemutatnia a kódokat, hogy a felhasználók könnyen olvashassák, megérthessék és tanulhassanak belőlük a kódolási folyamat során.\\\hline
+\textbf{G\_07} & A vizuális elemek alakzatok formájában jelennek meg és különböző színekkel rendelkeznek, hogy a gyerekek számára könnyen használható legyen. \\\hline
+\textbf{G\_08} & Az oldal alján található Programkód megjelenítő felületen kell megjeleníteni a felhasználók által összeállított programokat C++ formátumban. Ez az ablak fontos szerepet tölt be azzal, hogy segítse a felhasználókat a programozás logikájának és struktúrájának megértésében, miközben átmennek a vizuális programozásból a kódolás gyakorlatába. A megjelenítő felületnek pontosan és érthetően kell bemutatnia a kódokat, hogy a felhasználók könnyen olvashassák, megérthessék és tanulhassanak belőlük a kódolási folyamat során.\\\hline
 
-\textbf{A\_09} & A Munkaterületnek a fő részének kell lennie az alkalmazáson belül, ahol a felhasználók a programjaikat létrehozhatják, szerkeszthetik és megtekinthetik. Ide kell helyezni és rendezni a különböző programozási elemeket az eszköztárból, hogy a felhasználók könnyedén elhelyezhessék és mozgathassák azokat a Munkaterületen.\\\hline
+\textbf{G\_09} & A Munkaterületnek a fő részének kell lennie az alkalmazáson belül, ahol a felhasználók a programjaikat létrehozhatják, szerkeszthetik és megtekinthetik. Ide kell helyezni és rendezni a különböző programozási elemeket az eszköztárból, hogy a felhasználók könnyedén elhelyezhessék és mozgathassák azokat a Munkaterületen.\\\hline
 
-\textbf{A\_10} & Az elemek közötti mozgatásnak és kapcsolatok kialakítása nyilak segítségével valósítandó meg, hogy egyszerű és intuitív legyen, hogy a felhasználók gördülékenyen és hatékonyan tudjanak dolgozni a programjaik létrehozásakor. \\\hline
+\textbf{G\_10} & Az elemek közötti mozgatásnak és kapcsolatok kialakítása nyilak segítségével valósítandó meg, hogy egyszerű és intuitív legyen, hogy a felhasználók gördülékenyen és hatékonyan tudjanak dolgozni a programjaik létrehozásakor. \\\hline
 \hline
-\end{tabular}
 \caption{Gyerekeknek szánt felület követelményei}
-\label{table:my_label}
-\end{table}
+\end{longtable}
+\endgroup
 
 \subsection{*távirányítók*}
 \subsubsection{Fizikai Távirányítás}
 \subsubsection{Felület terv}
-\includegraphics[Felületterv]{fizikaitavir_feluletter.png}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{fizikaitavir_feluletter.png}
+\caption{\label{fig:image}Gyerekeknek felület}
+\end{figure}
+
 
 \subsubsection{Funkciók}
+
+\begingroup
+\centering
+\begin{longtable}{|c|p{14cm}|}
+\hline
+\textbf{Azonosító} & \textbf{Leírás}        \\ 
+\hline
+       \textbf{T\_00}  & … \\\hline
+       \textbf{T\_00}  & … \\\hline
+       \textbf{T\_00}  & … \\\hline
+\hline
+\caption{Fizikai távirányító követelményei}
+\end{longtable}
+\endgroup
+
 \begin{itemize}
     \item Funkciógombok
     \begin{itemize}
@@ -228,7 +259,8 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
     \item 8+ (Nyolc éves kortól használható)
 \end{itemize}
 
-\subsubsection{Telefonos applikáció követelményei}
+
+\subsubsection{Telefonon és tableten elérhető applikáció követelményei}
 
 (itt is valami bevezető szöveg az adott részhez)
 
@@ -238,12 +270,12 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \hline
 \textbf{Azonosító} & \textbf{Leírás}        \\ 
 \hline
-       \textbf{APP\_01}  & Az alkalmazás elérhető lesz mobilon és táblagépen egyaránt. A fejlesztés két fázisra oszlik: az Android alkalmazás az első fázisban készül el, míg a második fázisban az iOS alkalmazás fejlesztése történik.
+       \textbf{A\_01}  & Az alkalmazás elérhető lesz mobilon és táblagépen egyaránt. A fejlesztés két fázisra oszlik: az Android alkalmazás az első fázisban készül el, míg a második fázisban az iOS alkalmazás fejlesztése történik.
        Az Android alkalmazás kompatibilis lesz az Android 11. verziótól kezdve, és támogatni fogja az újabb Android verziókat is (pl. Android 12, 13 stb.). Az iOS alkalmazás elérhető lesz az iOS 14 verziótól kezdve és támogatja az ezt követő újabb iOS verziókat.
        Az Android alkalmazás elérhető lesz a Google Play Áruházban. Az iOS alkalmazás elérhető lesz az App Store-ban. Az alkalmazás mindkét platformon ingyenesen elérhető a felhasználók számára.
        Az alkalmazás támogatja a sötét módot, amely összhangban van a felhasználó által beállított telefon vagy táblagép rendszereinek sötét mód beállításaival. \\\hline
        
-       \textbf{APP\_02}  & Az alkalmazás menürendszerében a következő opcióknek kell megjelennie:
+       \textbf{A\_02}  & Az alkalmazás menürendszerében a következő opcióknek kell megjelennie:
        \begin{itemize}
        \item "Console"
        \item "Templates"
@@ -252,17 +284,17 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
        \end{itemize}
        A “Console” menüpontban érhető el az aktuális távirányító. A “Templates” menüben láthatja a felhasználó az összes korábban mentett távirányítót, lehetőség van egy távirányíttót aktuális távirányítóvá választani és kedvencekként megjelölni ezeket. Az “Editor” menüpontban készíthet a felhasználó új távirányítókat és  szerkeszthet már meglévőket. A “Settings” menüpontban az alkalmazás nyelvének módosítása lehetséges. \\\hline
        
-       \textbf{APP\_03}  & Az alkalmazás felhasználói felülete elérhető lesz az Európai Unió (EU) nyelvein. A felhasználóknak lehetőségük lesz könnyen átállítani az alkalmazás nyelvbeállításait az alkalmazás "Beállítások" menüjében. Az alkalmazáshoz készül egy felhasználói dokumentáció, amely egy külső weboldalon lesz elérhető. A dokumentáció minden EU nyelvén elérhető lesz, hogy segítse a felhasználókat az alkalmazás megértésében és kezelésében.  \\\hline
+       \textbf{A\_03}  & Az alkalmazás felhasználói felülete elérhető lesz az Európai Unió (EU) nyelvein. A felhasználóknak lehetőségük lesz könnyen átállítani az alkalmazás nyelvbeállításait az alkalmazás "Beállítások" menüjében. Az alkalmazáshoz készül egy felhasználói dokumentáció, amely egy külső weboldalon lesz elérhető. A dokumentáció minden EU nyelvén elérhető lesz, hogy segítse a felhasználókat az alkalmazás megértésében és kezelésében.  \\\hline
        
-       \textbf{APP\_04}  & Az alkalmazás alapértelmezett felületi tervvel rendelkezik, amely tartalmazza az összes funkciógombot és optimalizált elrendezést kínál. Az alkalmazás alapfelülete részben hasonlítani fog a hagyományos fizikai távirányítók elrendezésére és funkcióira. Emellett a felhasználóknak lehetőségük van saját felület és kinézet tervezésére a távirányítóhoz. A felhasználók testreszabhatják és alakíthatják az alkalmazás távirányító felületét a saját igényeiknek és LEGO modelljeiknek megfelelően. Az alkalmazás lehetőséget biztosít a felhasználóknak arra, hogy a távirányító kialakításához előre meghatározott funkció gombokat húzzanak és helyezzenek el az alkalmazásban a drag-and-drop módszer segítségével. A funkciógombok számának, elrendezésének és elhelyezkedésének meghatározására is lehetőség nyílik. Ezen felül a felhasználók meghatározhatják, hogy melyik vezérlőegység melyik portjához rendelik ezeket a funkciógombokat, így lehetővé téve a kiválasztott perifériák vezérlését az alkalmazáson keresztül. \\\hline
+       \textbf{A\_04}  & Az alkalmazás alapértelmezett felületi tervvel rendelkezik, amely tartalmazza az összes funkciógombot és optimalizált elrendezést kínál. Az alkalmazás alapfelülete részben hasonlítani fog a hagyományos fizikai távirányítók elrendezésére és funkcióira. Emellett a felhasználóknak lehetőségük van saját felület és kinézet tervezésére a távirányítóhoz. A felhasználók testreszabhatják és alakíthatják az alkalmazás távirányító felületét a saját igényeiknek és LEGO modelljeiknek megfelelően. Az alkalmazás lehetőséget biztosít a felhasználóknak arra, hogy a távirányító kialakításához előre meghatározott funkció gombokat húzzanak és helyezzenek el az alkalmazásban a drag-and-drop módszer segítségével. A funkciógombok számának, elrendezésének és elhelyezkedésének meghatározására is lehetőség nyílik. Ezen felül a felhasználók meghatározhatják, hogy melyik vezérlőegység melyik portjához rendelik ezeket a funkciógombokat, így lehetővé téve a kiválasztott perifériák vezérlését az alkalmazáson keresztül. \\\hline
        
-       \textbf{APP\_05}  & Az alkalmazás lehetőséget biztosít több különböző felület létrehozására. A felhasználók által létrehozott távirányítókat nevekkel ellátva lehet menteni. A felhasználóknak lehetőségük van új felületeket létrehozására, vagy korábban mentett felületek módosítására az igényeiknek megfelelően. Exportálni és importálni is lehet a mentett felületeket. Az exportált és importált távirányító felületek fájlformátuma JSON. Az alkalmazásban a felhasználóknak lehetőségük van új távirányítókat létrehozni üres felülettel, vagy már meglévőket módosítani a "Szerkesztés" gomb segítségével. Azonban a háttérkép vagy más megjelenési elemek nem módosíthatóak vagy személyre szabhatóak a felhasználók által. \\\hline
+       \textbf{A\_05}  & Az alkalmazás lehetőséget biztosít több különböző felület létrehozására. A felhasználók által létrehozott távirányítókat nevekkel ellátva lehet menteni. A felhasználóknak lehetőségük van új felületeket létrehozására, vagy korábban mentett felületek módosítására az igényeiknek megfelelően. Exportálni és importálni is lehet a mentett felületeket. Az exportált és importált távirányító felületek fájlformátuma JSON. Az alkalmazásban a felhasználóknak lehetőségük van új távirányítókat létrehozni üres felülettel, vagy már meglévőket módosítani a "Szerkesztés" gomb segítségével. Azonban a háttérkép vagy más megjelenési elemek nem módosíthatóak vagy személyre szabhatóak a felhasználók által. \\\hline
        
-       \textbf{APP\_06}  & A szerkesztési felületen elérhető lesz egy funkciógomb készlet, amely gombokat, kapcsolókat, csúszkákat, tekerőket és kijelzőket foglal magában. Ezen a felületen a felhasználók képesek lesznek kiválasztani és beilleszteni az egyes funkciógombokat a távirányító felületére. A felület szerkesztése során az alkalmazásban található gombok inaktív állapotban vannak. Ennek célja, hogy a felhasználók könnyedén elhelyezhessék és testre szabhassák a felületet anélkül, hogy véletlenül aktiválnák a gombokat a szerkesztés folyamán. Az alkalmazásban a felhasználó elnevezheti a funkciógombokat, ahol a név maximum 8 alfanumerikus karakter hosszúságú lehet. A funkciógomb neve a gomb felett fog megjelenni. Emellett lehetőség van a gombok címzésének módosítására is, ami alapértelmezetten az 1-es vezérlőegység 1-es portjára mutat a funkciógomb kihelyezése után. Ezt az alap beállítást bármikor megváltoztathatja a felhasználó igényei szerint. Amikor a távirányító tervezése befejeződik, a "Mentés" gombbal tudja elmenteni az elkészült konfigurációt. \\\hline
+       \textbf{A\_06}  & A szerkesztési felületen elérhető lesz egy funkciógomb készlet, amely gombokat, kapcsolókat, csúszkákat, tekerőket és kijelzőket foglal magában. Ezen a felületen a felhasználók képesek lesznek kiválasztani és beilleszteni az egyes funkciógombokat a távirányító felületére. A felület szerkesztése során az alkalmazásban található gombok inaktív állapotban vannak. Ennek célja, hogy a felhasználók könnyedén elhelyezhessék és testre szabhassák a felületet anélkül, hogy véletlenül aktiválnák a gombokat a szerkesztés folyamán. Az alkalmazásban a felhasználó elnevezheti a funkciógombokat, ahol a név maximum 8 alfanumerikus karakter hosszúságú lehet. A funkciógomb neve a gomb felett fog megjelenni. Emellett lehetőség van a gombok címzésének módosítására is, ami alapértelmezetten az 1-es vezérlőegység 1-es portjára mutat a funkciógomb kihelyezése után. Ezt az alap beállítást bármikor megváltoztathatja a felhasználó igényei szerint. Amikor a távirányító tervezése befejeződik, a "Mentés" gombbal tudja elmenteni az elkészült konfigurációt. \\\hline
 
-       \textbf{APP\_07}  & Az alkalmazás Bluetooth kapcsolaton keresztül irányítja a vezérlőegységeket, és a távirányítónak a Bluetooth specifikáció által meghatározott távolságig kell működnie. Az alkalmazás és a fizikai távirányító közötti adatcsere nem szükséges. Az alkalmazást párosítani kell a vezérlőegységgel, hogy az aalkalmazás képes legyen irányítani az adott vezérlőegységet. Amikor össze akarjuk párosítani a fizikai távirányítót az alkalmazással és a vezérlőegységgel, az a vezérlő fogja irányítani a vezérlőegységet, amellyel utoljára párosítva volt. Az alkalmazás és a fizikai távirányító ebben az összefüggésben egyenrangúak, és az utoljára létrejött párosítás határozza meg, hogy melyik irányítja a vezérlőegységet. \\\hline
+       \textbf{A\_07}  & Az alkalmazás Bluetooth kapcsolaton keresztül irányítja a vezérlőegységeket, és a távirányítónak a Bluetooth specifikáció által meghatározott távolságig kell működnie. Az alkalmazás és a fizikai távirányító közötti adatcsere nem szükséges. Az alkalmazást párosítani kell a vezérlőegységgel, hogy az aalkalmazás képes legyen irányítani az adott vezérlőegységet. Amikor össze akarjuk párosítani a fizikai távirányítót az alkalmazással és a vezérlőegységgel, az a vezérlő fogja irányítani a vezérlőegységet, amellyel utoljára párosítva volt. Az alkalmazás és a fizikai távirányító ebben az összefüggésben egyenrangúak, és az utoljára létrejött párosítás határozza meg, hogy melyik irányítja a vezérlőegységet. \\\hline
        
-       \textbf{APP\_08}  & - Az alkalmazás képes irányítani a következő vezérlőegységekre csatlakoztatott perifériákat:
+       \textbf{A\_08}  & - Az alkalmazás képes irányítani a következő vezérlőegységekre csatlakoztatott perifériákat:
        \begin{itemize}
        \item Motor
        \item Pixeles kijelző
@@ -278,16 +310,51 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
          \end{itemize}
        \end{itemize} \\\hline
 
-       \textbf{APP\_09}  & (milyen gombjaink vannak, azok miket és hogyan irányítanak + a kijelző és az mit jelez ki) \\\hline
+       \textbf{A\_09}  & (milyen gombjaink vannak, azok miket és hogyan irányítanak + a kijelző és az mit jelez ki) \\\hline
        
 \hline
+\caption{Telefonos és tabletes távirányító követelményei}
 \end{longtable}
 \endgroup
 
 
 \subsection{*weboldal*}
+(rövid bevezető)
+
 \subsubsection{*megosztás*}
+(rövid bevezető)
+
+\begingroup
+\centering
+\begin{longtable}{|c|p{14cm}|}
+\hline
+\textbf{Azonosító} & \textbf{Leírás}        \\ 
+\hline
+       \textbf{M\_00}  & … \\\hline
+       \textbf{M\_00}  & … \\\hline
+       \textbf{M\_00}  & … \\\hline
+\hline
+\caption{…}
+\end{longtable}
+\endgroup
+
+
 \subsubsection{*dokumentáció*}
+(rövid bevezető)
+
+\begingroup
+\centering
+\begin{longtable}{|c|p{14cm}|}
+\hline
+\textbf{Azonosító} & \textbf{Leírás}        \\ 
+\hline
+       \textbf{D\_00}  & … \\\hline
+       \textbf{D\_00}  & … \\\hline
+       \textbf{D\_00}  & … \\\hline
+\hline
+\caption{…}
+\end{longtable}
+\endgroup
 
 
 \pagebreak

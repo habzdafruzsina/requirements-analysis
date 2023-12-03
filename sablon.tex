@@ -181,58 +181,52 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \hline
 \textbf{Azonosító} & \textbf{Leírás}        \\ 
 \hline
-       \textbf{T\_00}  & … \\\hline
-       \textbf{T\_00}  & … \\\hline
-       \textbf{T\_00}  & … \\\hline
-\hline
-\caption{Fizikai távirányító követelményei}
-\end{longtable}
-\endgroup
-
-\begin{itemize}
-    \item Funkciógombok
-    \begin{itemize}
+       \textbf{T\_00}  & Funkciógombok
+       \begin{itemize}
         \item Előre meghatározott funkciókat indítanak el, amennyiben az adott funkciót támogatja a jelenleg kapcsolódott vezérlő egység.
         \item Tíz darab, 0-9-ig számozva.
         \item Megnyomásra a kijelzőn az aktuálisan kiválasztott vezérlőegység kódja mellett megjelenik a funkció sorszáma is.
-    \end{itemize}
-
-    \item Analóg szabályzó
-    \begin{itemize}
+        \end{itemize}
+       \\\hline
+       \textbf{T\_01}  & Analóg Szabályzó 
+       \begin{itemize}
         \item Folytonos állású körbetekerhető kapcsoló.
         \item Funkciótól függően különböző dolgokat szabályoz. (Pl.: sebesség, fényerő stb)
         \item Tekerés közben 3 másodpercig a kijelzőn megjelenik a jelenleg választott érték, az adott funkció értéktartományától függően.
         \item 1 teljes körbetekerés 100 egység.
-    \end{itemize}
-    
-    \item LCD Kijelző
-    \begin{itemize}
+        \end{itemize}
+       \\\hline
+       \textbf{T\_02}  & LCD Kijelző
+       \begin{itemize}
         \item Minden információ itt jelenik meg.
         \item Alapesetben a kiválsaztott vezérlő 7 jegyű kódja és a funkció sorszáma van kijelezve. 
         \item Alacsony akkufeszültség esetén “LOW BATT” jelzést mutat, felváltva villog az alap kiválasztással.
         \item Kiválasztott vezérlő nélkül “NO SIGN” jelzés látható.
-    \end{itemize}
-    
-    \item "Cím" gomb
-    \begin{itemize}
+        \end{itemize}
+       \\\hline
+       \textbf{T\_03}  & Cím Gomb 
+       \begin{itemize}
         \item Aktuálisan vezérelt egységek közötti váltógomb
-    \end{itemize}
-    
-    \item Shift gomb
-    \begin{itemize}
+        \end{itemize}
+       \\\hline
+       \textbf{T\_04}  & Shift Gomb 
+       \begin{itemize}
         \item További funkciók elérése 10-19ig a megfelelő funkciógomb megnyomásával. 
-    \end{itemize}
-    
-    \item On-Off Kapcsoló
-    \begin{itemize}
+        \end{itemize}
+       \\\hline
+       \textbf{T\_05}  & On-Off Kapcsoló 
+       \begin{itemize}
         \item Kétállású váltókapcsoló
         \item A távirányító ki-be kapcsolására alkalmas gomb.
         \item Kikapcsoláskor a Bluetooth kapcsolat is megszakad, így a jelenleg futó funkció leáll
         \item Bekapcsoláskor alapértelmezésben nem kapcsolódik vezérlőegységhez, 0-s funkció kerül kiválasztásra.
-
-    \end{itemize}
-    
-\end{itemize}
+        \end{itemize}
+       \\\hline
+       
+\hline
+\caption{Fizikai távirányító követelményei}
+\end{longtable}
+\endgroup
 
 \subsubsection{Anyaghasználat}
     \begin{itemize}

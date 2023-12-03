@@ -8,7 +8,15 @@
 \usepackage{float}
 \usepackage{longtable}
 \usepackage[raggedrightboxes]{ragged2e}
+\usepackage{titlesec}
 
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 % Margins
 \topmargin=-0.45in
@@ -189,7 +197,7 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \end{figure}
 
 
-\subsubsection{Funkciók}
+\paragraph{Funkciók}
 
 \begingroup
 \centering
@@ -244,26 +252,26 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \end{longtable}
 \endgroup
 
-\subsubsection{Anyaghasználat}
+\paragraph{Anyaghasználat}
     \begin{itemize}
         \item 100\% ABS Műanyag
     \end{itemize}
 
 
-\subsubsection{Kapcsolódási specifikáció}
+\paragraph{Kapcsolódási specifikáció}
 \begin{itemize}
     \item Bluetooth 2.0 szabvány szerint
     \item 100m hatótávolság
     \item Ezen a kapcsolódási módon keresztül lehetőség a távirányító firmwarejének frissítésére, applikáción keresztül.
 \end{itemize}
 
-\subsubsection{Energiaellátás}
+\paragraph{Energiaellátás}
 \begin{itemize}
     \item AAA elem (vagy akkumulátor), 2db (Nem tartozék)
     \item Működési feszültség 3V
 \end{itemize}
 
-\subsubsection{Biztonsági tudnivalók}
+\paragraph{Biztonsági tudnivalók}
 \begin{itemize}
     \item EU Szabványnak megfelelő termék
     \item 8+ (Nyolc éves kortól használható)
@@ -272,8 +280,9 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 
 \subsubsection{Telefonon és tableten elérhető applikáció követelményei}
 
-(itt is valami bevezető szöveg az adott részhez)
+Az tervezett alkalmazás mobil és táblagép platformokon elérhető lesz. Az fejlesztés két fázisra oszlik: az Android verzió az első fázisban jelenik meg, majd a másodikban következik az iOS változat. Mindkét verzió ingyenes lesz és támogatni fogja a legfrissebb operációs rendszereket. Az alkalmazás lehetővé teszi távirányítók létrehozását, testreszabását és irányítást Bluetooth kapcsolaton keresztül. A felhasználók képesek lesznek kijelzőket, LED lámpákat, motorokat, hangszórókat és érzékelőket irányítani az alkalmazás segítségével, valamint létrehozhatnak és kezelhetnek különböző távirányító felületeket.
 
+\paragraph{Követelmények}
 \begingroup
 \centering
 \begin{longtable}{|c|p{14cm}|}
@@ -324,7 +333,7 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \end{longtable}
 \endgroup
 
-\subsubsection{Felületi tervek}
+\paragraph{Felületi tervek}
 
 \begin{figure}[H]
 \centering

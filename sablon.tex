@@ -42,10 +42,10 @@
 \begin{versionhistory}
     \vhEntry{1.0}{2023. November 3.}{Habzda Fruzsina Mária}{Első vázlat}
     \vhEntry{1.1}{2023. November 23.}{Novák Lilla}{A vázlat kibővítése és részekre osztása}
-    \vhEntry{1.2}{2023. November 30.}{Tóth Dóra, Székely Szilárd}{Asztali, gyerekeknek szánt alkalmazás követelményeinek megadása}
-    \vhEntry{1.3}{2023. November 30.}{Horváth Sára, Novák Lilla}{Telefonos távirányító alkalmazás követelményeinek megadása}
-    \vhEntry{1.4}{2023. December  1.}{Racskó Balázs, Vágó Blanka}{Fizikai távirányító követelményeinek megadása}
-    \vhEntry{1.4}{2023. December  3.}{Habzda Fruzsina}{Bevezető első verzió}
+    \vhEntry{1.2}{2023. November 30.}{Tóth Dóra, Székely Szilárd}{Asztali, gyerekeknek szánt alkalmazás követelményei és felületterv megadása}
+    \vhEntry{1.3}{2023. November 30.}{Horváth Sára, Novák Lilla}{Telefonos távirányító alkalmazás követelményei és felülettervek megadása}
+    \vhEntry{1.4}{2023. December  1.}{Racskó Balázs, Vágó Blanka}{Fizikai távirányító követelményei és felületterv megadása}
+    \vhEntry{1.5}{2023. December  3.}{Habzda Fruzsina}{Bevezető első verzió}
 \end{versionhistory}
 
 
@@ -197,14 +197,14 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \hline
 \textbf{Azonosító} & \textbf{Leírás}        \\ 
 \hline
-       \textbf{T\_00}  & Funkciógombok
+       \textbf{T\_01}  & Funkciógombok
        \begin{itemize}
         \item Előre meghatározott funkciókat indítanak el, amennyiben az adott funkciót támogatja a jelenleg kapcsolódott vezérlő egység.
         \item Tíz darab, 0-9-ig számozva.
         \item Megnyomásra a kijelzőn az aktuálisan kiválasztott vezérlőegység kódja mellett megjelenik a funkció sorszáma is.
         \end{itemize}
        \\\hline
-       \textbf{T\_01}  & Analóg Szabályzó 
+       \textbf{T\_02}  & Analóg Szabályzó 
        \begin{itemize}
         \item Folytonos állású körbetekerhető kapcsoló.
         \item Funkciótól függően különböző dolgokat szabályoz. (Pl.: sebesség, fényerő stb)
@@ -212,7 +212,7 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
         \item 1 teljes körbetekerés 100 egység.
         \end{itemize}
        \\\hline
-       \textbf{T\_02}  & LCD Kijelző
+       \textbf{T\_03}  & LCD Kijelző
        \begin{itemize}
         \item Minden információ itt jelenik meg.
         \item Alapesetben a kiválsaztott vezérlő 7 jegyű kódja és a funkció sorszáma van kijelezve. 
@@ -220,17 +220,17 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
         \item Kiválasztott vezérlő nélkül “NO SIGN” jelzés látható.
         \end{itemize}
        \\\hline
-       \textbf{T\_03}  & Cím Gomb 
+       \textbf{T\_04}  & Cím Gomb 
        \begin{itemize}
         \item Aktuálisan vezérelt egységek közötti váltógomb
         \end{itemize}
        \\\hline
-       \textbf{T\_04}  & Shift Gomb 
+       \textbf{T\_05}  & Shift Gomb 
        \begin{itemize}
         \item További funkciók elérése 10-19ig a megfelelő funkciógomb megnyomásával. 
         \end{itemize}
        \\\hline
-       \textbf{T\_05}  & On-Off Kapcsoló 
+       \textbf{T\_06}  & On-Off Kapcsoló 
        \begin{itemize}
         \item Kétállású váltókapcsoló
         \item A távirányító ki-be kapcsolására alkalmas gomb.
@@ -302,7 +302,7 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
        
        \textbf{A\_06}  & A szerkesztési felületen elérhető lesz egy funkciógomb készlet, amely gombokat, kapcsolókat, csúszkákat, tekerőket és kijelzőket foglal magában. Ezen a felületen a felhasználók képesek lesznek kiválasztani és beilleszteni az egyes funkciógombokat a távirányító felületére. A felület szerkesztése során az alkalmazásban található gombok inaktív állapotban vannak. Ennek célja, hogy a felhasználók könnyedén elhelyezhessék és testre szabhassák a felületet anélkül, hogy véletlenül aktiválnák a gombokat a szerkesztés folyamán. Az alkalmazásban a felhasználó elnevezheti a funkciógombokat, ahol a név maximum 8 alfanumerikus karakter hosszúságú lehet. A funkciógomb neve a gomb felett fog megjelenni. Emellett lehetőség van a gombok címzésének módosítására is, ami alapértelmezetten az 1-es vezérlőegység 1-es portjára mutat a funkciógomb kihelyezése után. Ezt az alap beállítást bármikor megváltoztathatja a felhasználó igényei szerint. Amikor a távirányító tervezése befejeződik, a "Mentés" gombbal tudja elmenteni az elkészült konfigurációt. \\\hline
 
-       \textbf{A\_07}  & Az alkalmazás Bluetooth kapcsolaton keresztül irányítja a vezérlőegységeket, és a távirányítónak a Bluetooth specifikáció által meghatározott távolságig kell működnie. Az alkalmazás és a fizikai távirányító közötti adatcsere nem szükséges. Az alkalmazást párosítani kell a vezérlőegységgel, hogy az aalkalmazás képes legyen irányítani az adott vezérlőegységet. Amikor össze akarjuk párosítani a fizikai távirányítót az alkalmazással és a vezérlőegységgel, az a vezérlő fogja irányítani a vezérlőegységet, amellyel utoljára párosítva volt. Az alkalmazás és a fizikai távirányító ebben az összefüggésben egyenrangúak, és az utoljára létrejött párosítás határozza meg, hogy melyik irányítja a vezérlőegységet. \\\hline
+       \textbf{A\_07}  & Az alkalmazás Bluetooth kapcsolaton keresztül irányítja a vezérlőegységeket, és a távirányítónak a Bluetooth 2.0 specifikáció által meghatározott távolságig kell működnie. Az alkalmazás és a fizikai távirányító közötti adatcsere nem szükséges. Az alkalmazást párosítani kell a vezérlőegységgel, hogy az aalkalmazás képes legyen irányítani az adott vezérlőegységet. Amikor össze akarjuk párosítani a fizikai távirányítót az alkalmazással és a vezérlőegységgel, az a vezérlő fogja irányítani a vezérlőegységet, amellyel utoljára párosítva volt. Az alkalmazás és a fizikai távirányító ebben az összefüggésben egyenrangúak, és az utoljára létrejött párosítás határozza meg, hogy melyik irányítja a vezérlőegységet. \\\hline
        
        \textbf{A\_08}  & - Az alkalmazás képes irányítani a következő vezérlőegységekre csatlakoztatott perifériákat:
        \begin{itemize}

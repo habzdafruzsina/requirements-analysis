@@ -100,11 +100,11 @@ Mobilalkalmazás Távirányító - A \\
 Webes Megosztás - W \\
 Dokumentációs Anyag - D \\
 
-\subsection{*programozási felületek*}
+\subsection{Programozási felületek}
 
 (valami bevezető szöveg az adott részhez)
 
-\subsubsection{*programozóknak*}
+\subsubsection{C++ programozási felület}
 
 (itt is valami bevezető szöveg az adott részhez)
 
@@ -123,7 +123,7 @@ Dokumentációs Anyag - D \\
 \endgroup
 
 
-\subsubsection{Alkalmazás követelményei}
+\subsubsection{Grafikus programozási felület}
 
 A fiatalabb korosztályt megcélzó alkalmazás felülete 5 fő részből fog állni, amelyek segítségével a felhasználók könnyen és hatékonyan dolgozhatnak:
 
@@ -178,7 +178,7 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \end{longtable}
 \endgroup
 
-\subsection{*távirányítók*}
+\subsection{Távirányítók}
 \subsubsection{Fizikai Távirányítás}
 \subsubsection{Felület terv}
 
@@ -280,10 +280,7 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \hline
 \textbf{Azonosító} & \textbf{Leírás}        \\ 
 \hline
-       \textbf{A\_01}  & Az alkalmazás elérhető lesz mobilon és táblagépen egyaránt. A fejlesztés két fázisra oszlik: az Android alkalmazás az első fázisban készül el, míg a második fázisban az iOS alkalmazás fejlesztése történik.
-       Az Android alkalmazás kompatibilis lesz az Android 11. verziótól kezdve, és támogatni fogja az újabb Android verziókat is (pl. Android 12, 13 stb.). Az iOS alkalmazás elérhető lesz az iOS 14 verziótól kezdve és támogatja az ezt követő újabb iOS verziókat.
-       Az Android alkalmazás elérhető lesz a Google Play Áruházban. Az iOS alkalmazás elérhető lesz az App Store-ban. Az alkalmazás mindkét platformon ingyenesen elérhető a felhasználók számára.
-       Az alkalmazás támogatja a sötét módot, amely összhangban van a felhasználó által beállított telefon vagy táblagép rendszereinek sötét mód beállításaival. \\\hline
+       \textbf{A\_01}  & Az alkalmazás elérhető lesz mobilon és táblagépen egyaránt. A fejlesztés két fázisra oszlik: az Android alkalmazás az első fázisban készül el, míg a második fázisban az iOS alkalmazás fejlesztése történik. Az Android alkalmazás kompatibilis lesz az Android 11. verziótól kezdve, és támogatni fogja az újabb Android verziókat is (pl. Android 12, 13 stb.). Az iOS alkalmazás elérhető lesz az iOS 14 verziótól kezdve és támogatja az ezt követő újabb iOS verziókat. Az Android alkalmazás elérhető lesz a Google Play Áruházban. Az iOS alkalmazás elérhető lesz az App Store-ban. Az alkalmazás mindkét platformon ingyenesen elérhető a felhasználók számára. Az alkalmazás támogatja a sötét módot, amely összhangban van a felhasználó által beállított telefon vagy táblagép rendszereinek sötét mód beállításaival. \\\hline
        
        \textbf{A\_02}  & Az alkalmazás menürendszerében a következő opcióknek kell megjelennie:
        \begin{itemize}
@@ -320,7 +317,7 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
          \end{itemize}
        \end{itemize} \\\hline
 
-       \textbf{A\_09}  & (milyen gombjaink vannak, azok miket és hogyan irányítanak + a kijelző és az mit jelez ki) \\\hline
+       \textbf{A\_09}  & Az alkalmazás funkciógomb készletében számos gomb található. A motor fordulatszámát a felhasználó állíthatja 0-tól 20-ig, ezzel meghatározva a sebességet. Emellett a motor képes visszajelzést adni a pozíciójáról és a fordulatszámáról, amit a kijelzőn meg tud jeleníteni a felhasználó. A felhasználó grafikát jeleníthet meg a pixeles kijelzőn. A kijelzők pixelei képesek RGB színeket megjeleníteni, és a felhasználónak lehetősége van több különálló kijelzőt egyenként kezelni. Alapértelmezés szerint ez az opció be van kapcsolva, de a felhasználó kikapcsolhatja, ha szükséges. A kijelzőn megjelenített grafikát a vezérlőegység határozza meg, ezért a felhasználónak először feltöltetnie kell a kívánt grafikát a vezérlőegységre. A LED állapotát a vezérlőegység vezérli, a felhasználó pedig a színkerék segítségével kiválaszthatja a színt, vagy manuálisan adhatja meg a HEX kódot. A felhasználó képes irányítani a hangszórót, választhat alap hangok közül vagy saját hangokat tölthet fel a vezérlőegységre. Az adott hang lejátszását egy legördülő menüből választhatja ki, majd a "Lejátszás" gombbal indíthatja el. A kijelző jelzi a vezérlőegység által végrehajtott utasításokat az adott porton, és visszajelzi, hogy azok sikeresek vagy sikertelenek voltak. Továbbá a kijelző képes megjeleníteni más érzékelők visszajelzéseit, mint például a reed relé, nyomógomb, kétállású ki-be kapcsoló, távolság-, fényerő- és színérzékelő, valamint a giroszkóp jelzéseit. A színérzékelés esetén nemcsak a HEX kód, hanem maga a szín is megjelenik a kijelzőn. A címzőgombok lehetővé teszik a felhasználó számára, hogy az egyes funkciógombokat hozzárendelje egy vezérlőegység portjához. A gombok felett megjelenik a vezérlőegység sorszáma vagy neve (ha van), valamint a port sorszáma. Ez lehetővé teszi, hogy a felhasználó több ugyanolyan funkciógombot helyezzen el a felületen, amelyek különböző perifériákat irányítanak. \\\hline
        
 \hline
 \caption{Telefonos és tabletes távirányító követelményei}
@@ -353,10 +350,10 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \caption{\label{fig:image}Telefonos és tabletes távirányító egyéni vezérlőpult lista felületi terve}
 \end{figure}
 
-\subsection{*weboldal*}
+\subsection{Weboldal}
 (rövid bevezető)
 
-\subsubsection{*megosztás*}
+\subsubsection{Megosztási felület}
 (rövid bevezető)
 
 \begingroup
@@ -374,7 +371,7 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \endgroup
 
 
-\subsubsection{*dokumentáció*}
+\subsubsection{Dokumentáció}
 (rövid bevezető)
 
 \begingroup

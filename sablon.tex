@@ -8,7 +8,15 @@
 \usepackage{float}
 \usepackage{longtable}
 \usepackage[raggedrightboxes]{ragged2e}
+\usepackage{titlesec}
 
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 % Margins
 \topmargin=-0.45in
@@ -42,31 +50,46 @@
 \begin{versionhistory}
     \vhEntry{1.0}{2023. November 3.}{Habzda Fruzsina Mária}{Első vázlat}
     \vhEntry{1.1}{2023. November 23.}{Novák Lilla}{A vázlat kibővítése és részekre osztása}
-    \vhEntry{1.2}{2023. November 30.}{Tóth Dóra, Székely Szilárd}{Asztali, gyerekeknek szánt alkalmazás követelményeinek megadása}
-    \vhEntry{1.3}{2023. November 30.}{Horváth Sára, Novák Lilla}{Telefonos távirányító alkalmazás követelményeinek megadása}
-    \vhEntry{1.4}{2023. December  1.}{Racskó Balázs, Vágó Blanka}{Fizikai távirányító követelményeinek megadása}
-    \vhEntry{1.5}{2023. December  3.}{Novák Lilla, Horváth Sára}{Telefonos távirányító alkalmazás felületi tervek}
+    \vhEntry{1.2}{2023. November 30.}{Tóth Dóra, Székely Szilárd}{Asztali, gyerekeknek szánt alkalmazás követelményei és felületterv megadása}
+    \vhEntry{1.3}{2023. November 30.}{Horváth Sára, Novák Lilla}{Telefonos távirányító alkalmazás követelményei és felülettervek megadása}
+    \vhEntry{1.4}{2023. December  1.}{Racskó Balázs, Vágó Blanka}{Fizikai távirányító követelményei és felületterv megadása}
+    \vhEntry{1.5}{2023. December  3.}{Habzda Fruzsina}{Bevezető első verzió}
 \end{versionhistory}
 
 
 \pagebreak
 \section{Projekt bemutatása}
 
-(összefoglaló ezekről, kb 1 oldal;
-miről szól a projekt?
-kinek a számára készül?
-ki a kivitelező?
-mik a kritériumok?
-miért készül a projekt, miért van szükség rá?
-mi a célja?
-időtartam, költségvetés
-rizikók)
+Ennek a projektnek az lenne a célja, hogy LEGO-hoz hasonló elemek és robotok kompatibilitásával rendelkező távirányítót és programozási rendszert hozzunk létre. A távirányítás két részből áll: az applikációból és a fizikai távirányítóból. A programozáshoz két felület áll rendelkezésre. Továbbá tartozik egy megosztó fórum és felhasználói dokumentáció is a projekthez.
+\newline
 
+A célközönség minden korosztályt magába foglalja, a fő piac viszont egyelőre az Európai Unióra korlátozódik.
+\newline
 
-\begin{itemize}
-\item felsorolás1
-\item felsorolás2
-\end{itemize}
+A programozási felület tartalmaz C++ fejlesztői környezetet és főként gyerekeknek szánt grafikus nyelvekhez felületet. Ez egy webalkalmazás formájában készül el, és a legelterjedtebb böngészőkben lesz támogatott. Az alkalmazás elemei, funkcionalitásai részletesen testreszabhatók, konfigurálhatók lesznek a hatékony felhasználás/használat érdekében. A grafikus felület színes formákkal segíti majd a programozást, és növeli az élményt a gyerekek számára. Az alkalmazásnak meg kell tudnia jeleníteni a vizuális programokat C++ nyelven is, hogy segítse a felhasználókat a bonyolultabb, csupán szöveges kódoláshoz való áttérésben.
+A programok újrafelhasználhatók, megoszthatók egy fórumon, ahol értékelhetők is.
+\newline
+
+A fizikai távirányító elemekkel működik, Bluetooth-on keresztül kommunikál a robotokkal és a vezérlőegységekkel. Ez korlátozza a hatótávot. A fizikai távirányító főként a 8 éves korosztályt célozná meg. A távirányító funkciógombokat, analóg szabályzókat, LCD kijelzőt, Cím és Shift gombokat,  és on-off kapcsolót tartalmaz. EUs szabványnak meg kell felelnie, és ABS műanyagból kell készülnie.
+\newline
+
+A mobilapp távirányító Androidra, majd IOS-re támogatott ingyenes szoftver, és ez is Bluetooth-al kommunikál. A felhasználó testreszabhatja az applikációs felületet, mentheti és előhívhatja a beállításokat. A mobilapp elérhető nyelvei közé tartozik az angol, és az EU összes nyelve. Az alkalmazás tudja irányítani vezérlőegységhez csatlakoztatott perifériákat. (Ilyen perifériák lehetnek a kijelzők, motorok, lámpák, hangszórók és különböző érzékelők.)
+\newline
+
+A felhasználói dokumentáció az asztali alkalmazásról elérhető lesz az interneten. A C++ -os környezethez angol változat, a grafikus környezethez az EU összes nyelvén.
+\newline
+
+A projekt kivitelezése során fontos a perifériákat előállító csapattal való együttműködés.
+\newline
+
+A projekt időtartamára a megrendelővel nem történt megállapodás. 
+Az általunk megbecsült költségvetés 150 millió Legófillért tesz ki.
+\newline
+
+Az alkalmazások és a felhasználói dokumentációk lefordításához speciálisan erre szakosodott alvállakozók bevonását javasoljuk. 
+\newline
+
+A dokumentációban található felülettervek javaslatok, nem a megrendelőtől származnak.
 
 
 \pagebreak
@@ -85,11 +108,11 @@ Mobilalkalmazás Távirányító - A \\
 Webes Megosztás - W \\
 Dokumentációs Anyag - D \\
 
-\subsection{*programozási felületek*}
+\subsection{Programozási felületek}
 
 (valami bevezető szöveg az adott részhez)
 
-\subsubsection{*programozóknak*}
+\subsubsection{C++ programozási felület}
 
 (itt is valami bevezető szöveg az adott részhez)
 
@@ -108,7 +131,7 @@ Dokumentációs Anyag - D \\
 \endgroup
 
 
-\subsubsection{Alkalmazás követelményei}
+\subsubsection{Grafikus programozási felület}
 
 A fiatalabb korosztályt megcélzó alkalmazás felülete 5 fő részből fog állni, amelyek segítségével a felhasználók könnyen és hatékonyan dolgozhatnak:
 
@@ -163,9 +186,9 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \end{longtable}
 \endgroup
 
-\subsection{*távirányítók*}
+\subsection{Távirányítók}
 \subsubsection{Fizikai Távirányítás}
-\subsubsection{Felület terv}
+\paragraph{Felület terv}
 
 \begin{figure}[H]
 \centering
@@ -174,7 +197,7 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \end{figure}
 
 
-\subsubsection{Funkciók}
+\paragraph{Funkciók}
 
 \begingroup
 \centering
@@ -182,14 +205,14 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \hline
 \textbf{Azonosító} & \textbf{Leírás}        \\ 
 \hline
-       \textbf{T\_00}  & Funkciógombok
+       \textbf{T\_01}  & Funkciógombok
        \begin{itemize}
         \item Előre meghatározott funkciókat indítanak el, amennyiben az adott funkciót támogatja a jelenleg kapcsolódott vezérlő egység.
         \item Tíz darab, 0-9-ig számozva.
         \item Megnyomásra a kijelzőn az aktuálisan kiválasztott vezérlőegység kódja mellett megjelenik a funkció sorszáma is.
         \end{itemize}
        \\\hline
-       \textbf{T\_01}  & Analóg Szabályzó 
+       \textbf{T\_02}  & Analóg Szabályzó 
        \begin{itemize}
         \item Folytonos állású körbetekerhető kapcsoló.
         \item Funkciótól függően különböző dolgokat szabályoz. (Pl.: sebesség, fényerő stb)
@@ -197,7 +220,7 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
         \item 1 teljes körbetekerés 100 egység.
         \end{itemize}
        \\\hline
-       \textbf{T\_02}  & LCD Kijelző
+       \textbf{T\_03}  & LCD Kijelző
        \begin{itemize}
         \item Minden információ itt jelenik meg.
         \item Alapesetben a kiválsaztott vezérlő 7 jegyű kódja és a funkció sorszáma van kijelezve. 
@@ -205,17 +228,17 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
         \item Kiválasztott vezérlő nélkül “NO SIGN” jelzés látható.
         \end{itemize}
        \\\hline
-       \textbf{T\_03}  & Cím Gomb 
+       \textbf{T\_04}  & Cím Gomb 
        \begin{itemize}
         \item Aktuálisan vezérelt egységek közötti váltógomb
         \end{itemize}
        \\\hline
-       \textbf{T\_04}  & Shift Gomb 
+       \textbf{T\_05}  & Shift Gomb 
        \begin{itemize}
         \item További funkciók elérése 10-19ig a megfelelő funkciógomb megnyomásával. 
         \end{itemize}
        \\\hline
-       \textbf{T\_05}  & On-Off Kapcsoló 
+       \textbf{T\_06}  & On-Off Kapcsoló 
        \begin{itemize}
         \item Kétállású váltókapcsoló
         \item A távirányító ki-be kapcsolására alkalmas gomb.
@@ -229,26 +252,26 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \end{longtable}
 \endgroup
 
-\subsubsection{Anyaghasználat}
+\paragraph{Anyaghasználat}
     \begin{itemize}
         \item 100\% ABS Műanyag
     \end{itemize}
 
 
-\subsubsection{Kapcsolódási specifikáció}
+\paragraph{Kapcsolódási specifikáció}
 \begin{itemize}
     \item Bluetooth 2.0 szabvány szerint
     \item 100m hatótávolság
     \item Ezen a kapcsolódási módon keresztül lehetőség a távirányító firmwarejének frissítésére, applikáción keresztül.
 \end{itemize}
 
-\subsubsection{Energiaellátás}
+\paragraph{Energiaellátás}
 \begin{itemize}
     \item AAA elem (vagy akkumulátor), 2db (Nem tartozék)
     \item Működési feszültség 3V
 \end{itemize}
 
-\subsubsection{Biztonsági tudnivalók}
+\paragraph{Biztonsági tudnivalók}
 \begin{itemize}
     \item EU Szabványnak megfelelő termék
     \item 8+ (Nyolc éves kortól használható)
@@ -257,18 +280,16 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 
 \subsubsection{Telefonon és tableten elérhető applikáció követelményei}
 
-(itt is valami bevezető szöveg az adott részhez)
+Az tervezett alkalmazás mobil és táblagép platformokon elérhető lesz. Az fejlesztés két fázisra oszlik: az Android verzió az első fázisban jelenik meg, majd a másodikban következik az iOS változat. Mindkét verzió ingyenes lesz és támogatni fogja a legfrissebb operációs rendszereket. Az alkalmazás lehetővé teszi távirányítók létrehozását, testreszabását és irányítást Bluetooth kapcsolaton keresztül. A felhasználók képesek lesznek kijelzőket, LED lámpákat, motorokat, hangszórókat és érzékelőket irányítani az alkalmazás segítségével, valamint létrehozhatnak és kezelhetnek különböző távirányító felületeket.
 
+\paragraph{Követelmények}
 \begingroup
 \centering
 \begin{longtable}{|c|p{14cm}|}
 \hline
 \textbf{Azonosító} & \textbf{Leírás}        \\ 
 \hline
-       \textbf{A\_01}  & Az alkalmazás elérhető lesz mobilon és táblagépen egyaránt. A fejlesztés két fázisra oszlik: az Android alkalmazás az első fázisban készül el, míg a második fázisban az iOS alkalmazás fejlesztése történik.
-       Az Android alkalmazás kompatibilis lesz az Android 11. verziótól kezdve, és támogatni fogja az újabb Android verziókat is (pl. Android 12, 13 stb.). Az iOS alkalmazás elérhető lesz az iOS 14 verziótól kezdve és támogatja az ezt követő újabb iOS verziókat.
-       Az Android alkalmazás elérhető lesz a Google Play Áruházban. Az iOS alkalmazás elérhető lesz az App Store-ban. Az alkalmazás mindkét platformon ingyenesen elérhető a felhasználók számára.
-       Az alkalmazás támogatja a sötét módot, amely összhangban van a felhasználó által beállított telefon vagy táblagép rendszereinek sötét mód beállításaival. \\\hline
+       \textbf{A\_01}  & Az alkalmazás elérhető lesz mobilon és táblagépen egyaránt. A fejlesztés két fázisra oszlik: az Android alkalmazás az első fázisban készül el, míg a második fázisban az iOS alkalmazás fejlesztése történik. Az Android alkalmazás kompatibilis lesz az Android 11. verziótól kezdve, és támogatni fogja az újabb Android verziókat is (pl. Android 12, 13 stb.). Az iOS alkalmazás elérhető lesz az iOS 14 verziótól kezdve és támogatja az ezt követő újabb iOS verziókat. Az Android alkalmazás elérhető lesz a Google Play Áruházban. Az iOS alkalmazás elérhető lesz az App Store-ban. Az alkalmazás mindkét platformon ingyenesen elérhető a felhasználók számára. Az alkalmazás támogatja a sötét módot, amely összhangban van a felhasználó által beállított telefon vagy táblagép rendszereinek sötét mód beállításaival. \\\hline
        
        \textbf{A\_02}  & Az alkalmazás menürendszerében a következő opcióknek kell megjelennie:
        \begin{itemize}
@@ -287,7 +308,7 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
        
        \textbf{A\_06}  & A szerkesztési felületen elérhető lesz egy funkciógomb készlet, amely gombokat, kapcsolókat, csúszkákat, tekerőket és kijelzőket foglal magában. Ezen a felületen a felhasználók képesek lesznek kiválasztani és beilleszteni az egyes funkciógombokat a távirányító felületére. A felület szerkesztése során az alkalmazásban található gombok inaktív állapotban vannak. Ennek célja, hogy a felhasználók könnyedén elhelyezhessék és testre szabhassák a felületet anélkül, hogy véletlenül aktiválnák a gombokat a szerkesztés folyamán. Az alkalmazásban a felhasználó elnevezheti a funkciógombokat, ahol a név maximum 8 alfanumerikus karakter hosszúságú lehet. A funkciógomb neve a gomb felett fog megjelenni. Emellett lehetőség van a gombok címzésének módosítására is, ami alapértelmezetten az 1-es vezérlőegység 1-es portjára mutat a funkciógomb kihelyezése után. Ezt az alap beállítást bármikor megváltoztathatja a felhasználó igényei szerint. Amikor a távirányító tervezése befejeződik, a "Mentés" gombbal tudja elmenteni az elkészült konfigurációt. \\\hline
 
-       \textbf{A\_07}  & Az alkalmazás Bluetooth kapcsolaton keresztül irányítja a vezérlőegységeket, és a távirányítónak a Bluetooth specifikáció által meghatározott távolságig kell működnie. Az alkalmazás és a fizikai távirányító közötti adatcsere nem szükséges. Az alkalmazást párosítani kell a vezérlőegységgel, hogy az aalkalmazás képes legyen irányítani az adott vezérlőegységet. Amikor össze akarjuk párosítani a fizikai távirányítót az alkalmazással és a vezérlőegységgel, az a vezérlő fogja irányítani a vezérlőegységet, amellyel utoljára párosítva volt. Az alkalmazás és a fizikai távirányító ebben az összefüggésben egyenrangúak, és az utoljára létrejött párosítás határozza meg, hogy melyik irányítja a vezérlőegységet. \\\hline
+       \textbf{A\_07}  & Az alkalmazás Bluetooth kapcsolaton keresztül irányítja a vezérlőegységeket, és a távirányítónak a Bluetooth 2.0 specifikáció által meghatározott távolságig kell működnie. Az alkalmazás és a fizikai távirányító közötti adatcsere nem szükséges. Az alkalmazást párosítani kell a vezérlőegységgel, hogy az aalkalmazás képes legyen irányítani az adott vezérlőegységet. Amikor össze akarjuk párosítani a fizikai távirányítót az alkalmazással és a vezérlőegységgel, az a vezérlő fogja irányítani a vezérlőegységet, amellyel utoljára párosítva volt. Az alkalmazás és a fizikai távirányító ebben az összefüggésben egyenrangúak, és az utoljára létrejött párosítás határozza meg, hogy melyik irányítja a vezérlőegységet. \\\hline
        
        \textbf{A\_08}  & - Az alkalmazás képes irányítani a következő vezérlőegységekre csatlakoztatott perifériákat:
        \begin{itemize}
@@ -305,14 +326,14 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
          \end{itemize}
        \end{itemize} \\\hline
 
-       \textbf{A\_09}  & (milyen gombjaink vannak, azok miket és hogyan irányítanak + a kijelző és az mit jelez ki) \\\hline
+       \textbf{A\_09}  & Az alkalmazás funkciógomb készletében számos gomb található. A motor fordulatszámát a felhasználó állíthatja 0-tól 20-ig, ezzel meghatározva a sebességet. Emellett a motor képes visszajelzést adni a pozíciójáról és a fordulatszámáról, amit a kijelzőn meg tud jeleníteni a felhasználó. A felhasználó grafikát jeleníthet meg a pixeles kijelzőn. A kijelzők pixelei képesek RGB színeket megjeleníteni, és a felhasználónak lehetősége van több különálló kijelzőt egyenként kezelni. Alapértelmezés szerint ez az opció be van kapcsolva, de a felhasználó kikapcsolhatja, ha szükséges. A kijelzőn megjelenített grafikát a vezérlőegység határozza meg, ezért a felhasználónak először feltöltetnie kell a kívánt grafikát a vezérlőegységre. A LED állapotát a vezérlőegység vezérli, a felhasználó pedig a színkerék segítségével kiválaszthatja a színt, vagy manuálisan adhatja meg a HEX kódot. A felhasználó képes irányítani a hangszórót, választhat alap hangok közül vagy saját hangokat tölthet fel a vezérlőegységre. Az adott hang lejátszását egy legördülő menüből választhatja ki, majd a "Lejátszás" gombbal indíthatja el. A kijelző jelzi a vezérlőegység által végrehajtott utasításokat az adott porton, és visszajelzi, hogy azok sikeresek vagy sikertelenek voltak. Továbbá a kijelző képes megjeleníteni más érzékelők visszajelzéseit, mint például a reed relé, nyomógomb, kétállású ki-be kapcsoló, távolság-, fényerő- és színérzékelő, valamint a giroszkóp jelzéseit. A színérzékelés esetén nemcsak a HEX kód, hanem maga a szín is megjelenik a kijelzőn. A címzőgombok lehetővé teszik a felhasználó számára, hogy az egyes funkciógombokat hozzárendelje egy vezérlőegység portjához. A gombok felett megjelenik a vezérlőegység sorszáma vagy neve (ha van), valamint a port sorszáma. Ez lehetővé teszi, hogy a felhasználó több ugyanolyan funkciógombot helyezzen el a felületen, amelyek különböző perifériákat irányítanak. \\\hline
        
 \hline
 \caption{Telefonos és tabletes távirányító követelményei}
 \end{longtable}
 \endgroup
 
-\subsubsection{Felületi tervek}
+\paragraph{Felületi tervek}
 
 \begin{figure}[H]
 \centering
@@ -338,10 +359,10 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \caption{\label{fig:image}Telefonos és tabletes távirányító egyéni vezérlőpult lista felületi terve}
 \end{figure}
 
-\subsection{*weboldal*}
+\subsection{Weboldal}
 (rövid bevezető)
 
-\subsubsection{*megosztás*}
+\subsubsection{Megosztási felület}
 (rövid bevezető)
 
 \begingroup
@@ -359,7 +380,7 @@ Ezeknek az eszközöknek könnyen hozzáférhetőnek és használhatónak kell l
 \endgroup
 
 
-\subsubsection{*dokumentáció*}
+\subsubsection{Dokumentáció}
 (rövid bevezető)
 
 \begingroup

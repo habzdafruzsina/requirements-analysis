@@ -33,7 +33,7 @@
 
 \title{\textbf{\BoldTitle}\\\Subtitle}
 
-\author{\textsc{\Large Projektvezető: Németh Gábor Árpád} \\ \textsc{Csapat tagjai:} Habzda Fruzsina Mária Horváth Sára, Kemény Dániel, Kiss Ámon, Novák Lilla, Racskó Balázs, Székely Szilárd, Torvinen Aili, Tóth Dóra, Vágó Blanka}
+\author{\textsc{\Large Projektvezető: Németh Gábor Árpád} \\ \textsc{Csapat tagjai:} Habzda Fruzsina Mária, Horváth Sára, Kemény Dániel, Kiss Ámon, Novák Lilla, Racskó Balázs, Székely Szilárd, Torvinen Aili Szonja, Tóth Dóra, Vágó Blanka}
 
 \date{\today}
 
@@ -57,6 +57,7 @@
     \vhEntry{1.5}{2023. December  3.}{Habzda Fruzsina Mária}{Bevezető első verzió}
     \vhEntry{1.6}{2023. December  3.}{Ámon Kiss, Dániel Kemény}{Gépes alkalmazás, C++ felület követelményeinek megadása}
     \vhEntry{1.7}{2023. December  3.}{Habzda Fruzsina Mária}{Dokumentáció követelmények megadása}
+    \vhEntry{1.8}{2023. December  3.}{Torvinen Aili Szonja}{Megosztási felület követelményeinek megadása}
 \end{versionhistory}
 
 
@@ -424,10 +425,10 @@ Az tervezett alkalmazás mobil és táblagép platformokon elérhető lesz. Az f
 \end{figure}
 
 \subsection{Weboldal}
-(rövid bevezető)
+A weboldal két főbb részre tagolható: a megosztási felületre, mely programok megosztására, illetve véleményezésére, megbeszélésére ad lehetőséget, valamint a dokumentációra, ahol a felhasználók egyszerűen kereshetnek számukra szükséges információkat az alkalmazásról.
 
 \subsubsection{Megosztási felület}
-(rövid bevezető)
+A megosztási felület lehetőséget ad a felhasználók által készített programok megosztására, újrafelhasználására. Kód alapú kollaborációra egyelőre nincs igény, későbbi bővítések során lehet ehhez szükséges követelmények bevezetéséről szó. Viszont más kódjainak értékelésére lehetőséget kell biztosítania, illetve egy fórum jellegű felülettel kell rendelkeznie a programokkal kapcsolatos beszélgetések lebonyolításához.
 
 \begingroup
 \centering
@@ -435,11 +436,15 @@ Az tervezett alkalmazás mobil és táblagép platformokon elérhető lesz. Az f
 \hline
 \textbf{Azonosító} & \textbf{Leírás}        \\ 
 \hline
-       \textbf{M\_00}  & … \\\hline
-       \textbf{M\_00}  & … \\\hline
-       \textbf{M\_00}  & … \\\hline
+       \textbf{M\_01}  & A programok megosztása egy fórum jellegű felületen lehetséges. A programok értékelésére, azokhoz kapcsolódó kommentek írására, kérdések feltevésére van lehetősége a felhasználónak, így egyszerűbben meg lehet találni a népszerű programokat, valamint könnyen segítséget és véleményt kérhetnek a programok ötletgazdái másoktól. \\\hline
+       \textbf{M\_02}  & Az értékelés feltöltött programonként történik, a skálára nincsen megkötés, a javaslatunk egy 5 csillagos rendszer használata. \\\hline
+       \textbf{M\_03}  & A megosztásoknál szükség van szöveg megadásának helyére, ahol le lehet írni, hogy milyen programról van szó. \\\hline
+       \textbf{M\_04}  & A feltöltött programok egy vezérlőegységhez kapcsolódó instrukciókat tartalmaznak, nem irányítanak közvetlenül több egységet. Egy program egy vagy több vezérlőegységen futhat egyszerre, viszont ilyen moduláris formában egyszerűbb a komplex rendszerek programjainak megosztása is. \\\hline
+       \textbf{M\_05}  & A felületen nemcsak programok megosztása lehetséges, hanem az applikációban létrehozott távirányító-elrendezések is közzétehetőek. Ezekhez ugyanúgy lehetséges hozzászólni és értékelni őket. \\\hline
+       \textbf{M\_06}  & A megosztott programok felhőben tárolandóak, maximum 1GB adat tölthető fel egyszerre. \\\hline
+       \textbf{M\_07}  & A felület egyszerűen kezelhető, azaz a dokumentáció olvasása nélkül is megtalálhatóak a program külön területei. \\\hline
 \hline
-\caption{…}
+\caption{Megosztási felület követelményei}
 \end{longtable}
 \endgroup
 

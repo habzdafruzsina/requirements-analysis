@@ -162,14 +162,14 @@ A felület a C++ programozási nyelvekhez értő programozókat célozza meg. Az
 \hline
 \textbf{Azonosító} & \textbf{Leírás}        \\ 
 \hline
-       \textbf{P\_01}  &  Platform független fordítást kell biztosítani. \\\hline
-       \textbf{P\_02}  &  Gyors és hatékony fordító és kódolási környezet biztosítása. \\\hline
-       \textbf{P\_03}  &  Specifikus környezet a C++ kódoláshoz, amely áttekinthető és könnyen kezelhető. \\\hline
-       \textbf{P\_04}  &  Egyszerűen kezelhető DragAndDrop és Scratch környezet a gyerekek részére. \\\hline
-       \textbf{P\_05}  &  A felhasználói felületnek átláthatónak, intuitívnak és különböző eszközökön jól használhatónak kell lennie. \\\hline
-       \textbf{P\_06}  &  Amennyiben már megoldott a felhő alapú tárolás, akkor legyen lehetőség a kód szerkesztésre, akinek jogot biztosítottak. Legyenek állítható láthatóságok (privát és publikus).  \\\hline
-       \textbf{P\_07}  &  A rendszernek stabilnak és megbízhatónak kell lennie, nem lehetnek véletlen leállások és egyéb anomáliák.  \\\hline
-       \textbf{P\_08}  &  Legyen skálázható, egy nagyobb, vagy több főből álló csapat is könnyedén tudja fejleszteni a profjektet. \\\hline
+       \textbf{P\_18}  &  Platform független fordítást kell biztosítani. \\\hline
+       \textbf{P\_19}  &  Gyors és hatékony fordító és kódolási környezet biztosítása. \\\hline
+       \textbf{P\_20}  &  Specifikus környezet a C++ kódoláshoz, amely áttekinthető és könnyen kezelhető. \\\hline
+       \textbf{P\_21}  &  Egyszerűen kezelhető DragAndDrop és Scratch környezet a gyerekek részére. \\\hline
+       \textbf{P\_22}  &  A felhasználói felületnek átláthatónak, intuitívnak és különböző eszközökön jól használhatónak kell lennie. \\\hline
+       \textbf{P\_23}  &  Amennyiben már megoldott a felhő alapú tárolás, akkor legyen lehetőség a kód szerkesztésre, akinek jogot biztosítottak. Legyenek állítható láthatóságok (privát és publikus).  \\\hline
+       \textbf{P\_24}  &  A rendszernek stabilnak és megbízhatónak kell lennie, nem lehetnek véletlen leállások és egyéb anomáliák.  \\\hline
+       \textbf{P\_25}  &  Legyen skálázható, egy nagyobb, vagy több főből álló csapat is könnyedén tudja fejleszteni a profjektet. \\\hline
 \hline
 \caption{C++ programozási felület nem funkcionális követelményei}
 \end{longtable}
@@ -181,12 +181,12 @@ A felület a C++ programozási nyelvekhez értő programozókat célozza meg. Az
 \hline
 \textbf{Azonosító} & \textbf{Leírás}        \\ 
 \hline
-       \textbf{P\_01}  &  Részletes és jól strukturált dokumentáció, amely segít a felhasználóknak a rendszer használatában. \\\hline
-       \textbf{P\_02}  &  Lehetőség hibák vagy problémák jelentésére, hogy azokat időben orvosolni lehessen. \\\hline
-       \textbf{P\_03}  &  App support \\\hline
-       \textbf{P\_04}  &  Egy fórum lehetőség az eszmecseréhez, közösségi megosztáshoz és további támogatáshoz. \\\hline
-       \textbf{P\_05}  &  Funkció az értékeléshez és visszajelzésekhez  \\\hline
-       \textbf{P\_06}  &  Legyen elérhető egy letölthető Android alkalmazás a rendszer használatához mobil eszközökön. \\\hline
+       \textbf{P\_26}  &  Részletes és jól strukturált dokumentáció, amely segít a felhasználóknak a rendszer használatában. \\\hline
+       \textbf{P\_27}  &  Lehetőség hibák vagy problémák jelentésére, hogy azokat időben orvosolni lehessen. \\\hline
+       \textbf{P\_28}  &  App support \\\hline
+       \textbf{P\_29}  &  Egy fórum lehetőség az eszmecseréhez, közösségi megosztáshoz és további támogatáshoz. \\\hline
+       \textbf{P\_30}  &  Funkció az értékeléshez és visszajelzésekhez  \\\hline
+       \textbf{P\_31}  &  Legyen elérhető egy letölthető Android alkalmazás a rendszer használatához mobil eszközökön. \\\hline
 \hline
 \caption{C++ programozási felület egyéb követelményei}
 \end{longtable}
@@ -425,10 +425,14 @@ Az tervezett alkalmazás mobil és táblagép platformokon elérhető lesz. Az f
 \end{figure}
 
 \subsection{Weboldal}
-A weboldal két főbb részre tagolható: a megosztási felületre, mely programok megosztására, illetve véleményezésére, megbeszélésére ad lehetőséget, valamint a dokumentációra, ahol a felhasználók egyszerűen kereshetnek számukra szükséges információkat az alkalmazásról.
+
+Egy weboldal készül, mely lehetőséget biztosít a felhasználóknak arra, hogy megosszák programjaikat és a mobilalkalmazásban készített felületeiket fórumszerűen. Ez az oldal lesz a központi hely, ahol a felhasználók egymással megoszthatják tapasztalataikat, ötleteiket és programjaikat. Emellett itt találhatók majd a programozási felületek és a távirányítók dokumentációi is, amelyek segítségével a felhasználók könnyen és hatékonyan tanulhatnak, fejleszthetnek. Ez az oldal egyfajta közösségi platform lesz a LEGO építmények iránt érdeklődők, programozók és alkotók számára. Ezáltal egy olyan közösségi felület jön létre, ahol a LEGO építmények iránt érdeklődők egymással megoszthatják tapasztalataikat és tudásukat.
+
 
 \subsubsection{Megosztási felület}
-A megosztási felület lehetőséget ad a felhasználók által készített programok megosztására, újrafelhasználására. Kód alapú kollaborációra egyelőre nincs igény, későbbi bővítések során lehet ehhez szükséges követelmények bevezetéséről szó. Viszont más kódjainak értékelésére lehetőséget kell biztosítania, illetve egy fórum jellegű felülettel kell rendelkeznie a programokkal kapcsolatos beszélgetések lebonyolításához.
+
+Egy olyan megosztási felületet kell létrehozni, ahol a felhasználók szöveges tartalmakat és fájlokat csatolva oszthatnak meg posztokat. Ennek a platformnak a segítségével a felhasználók könnyedén megoszthatják ötleteiket, programjaikat és távirányító felületeiket másokkal.
+
 
 \begingroup
 \centering

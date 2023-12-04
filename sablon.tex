@@ -58,6 +58,7 @@
     \vhEntry{1.6}{2023. December  3.}{Ámon Kiss, Dániel Kemény}{Gépes alkalmazás, C++ felület követelményeinek megadása}
     \vhEntry{1.7}{2023. December  3.}{Habzda Fruzsina Mária}{Dokumentáció követelmények megadása}
     \vhEntry{1.8}{2023. December  3.}{Torvinen Aili Szonja}{Megosztási felület követelményeinek megadása}
+    \vhEntry{1.9}{2023. December  4.}{Torvinen Aili Szonja}{Szójegyzék hozzáadása}
 \end{versionhistory}
 
 
@@ -477,6 +478,42 @@ Felhasználói dokumentáció megírása kötelező, míg más dokumentációk m
 \pagebreak
 \section{Szójegyzék}
 
-(szavak csoportosítva, definíciókkal ellátva)
+\subsection{Projekt részei}
+\begin{itemize}
+    \item \textbf{Applikáció:}
+        Okostelefonon vagy tableten futtatható szoftver, amelyet távirányítóként használhatunk LEGO vezérlőegységekhez, valamint létrehozható benne saját elrendezés az irányításhoz.
+    \item \textbf{Fizikai távirányító:}
+        LEGO vezérlőegységekkel kommunikálni képes, kézzelfogható eszköz. Legfőbb irányításra használható részei a funkciógombok, analóg szabályozók, kijelző, on-off kapcsoló.
+    \item \textbf{Grafikus felület:}
+        Webalkalmazáson belül elérhető programozási felület, főként gyerekeknek. Színes, vizuális elemekkel adható meg a program, ezen elemek paraméterei külön szabhatók testre.
+    \item \textbf{C++ fejlesztői környezet:}
+        Webalkalmazáson belül elérhető programozási felület, főként tapasztaltabb programozóknak és felnőtteknek. C++ programozási nyelven adható meg a program, a fejlesztés egy IDE-n belül zajlik.
+    \item \textbf{Megosztási felület:}
+        Weboldalon elérhető felület, ahol lehetőség van fórumbejegyzéseket létrehozni, programokat és távirányító-elrendezéseket megosztani, valamint kommunikálni egyéb felhsználókkal kommentek és értékelések formájában.
+    \item \textbf{Dokumentáció:}
+        Weboldalon elérhető felület, a projekt egyes részeinek használatához adott leírást tartalmaz, amely a felhasználókat hivatott segíteni a programok használatában.
+\end{itemize}
+
+\subsection{Létrehozható állományok}
+\begin{itemize}
+    \item \textbf{Program:}
+        LEGO vezérlőegységen futtatható állomány, mely utasítások egy sorozatát tartalmazza. Ezen utasításokon keresztül tud a vezérlőegység irányítani a hozzá csatlakoztatott perifériákat, és reagálni az érzékelők által szolgáltatott információra.
+    \item \textbf{Távirányító-elrendezés:}
+        Egy, az alkalmazáson belül létrehozható elrendezése felületi elemeknek, amelyet vezérlőegységek irányítására használhatunk.
+\end{itemize}
+
+\subsection{Technológia}
+\begin{itemize}
+    \item \textbf{Vezérlőegység:}
+        Olyan, a LEGO rendszerbe illeszkedő fizikai eszköz, mely képes végrehajtani megfelelő futtatható programot, a portjaira csatlakoztatott perifériákat irányítani tudja, és Bluetooth protokoll segítségével irányítani lehet alkalmazásbeli vagy fizikai távirányítókkal.
+    \item \textbf{Perifériák:}
+        A LEGO rendszerbe illeszkedő fizikai eszközök, amelyek a vezérlőegység által irányítva valamilyen cselekvést hajtanak végre vagy megjelenítenek valamit (pl. motor, kijelző, hangszóró), vagy a vezérlőegység számára információt szolgáltatnak (pl. nyomógomb, giroszkóp).
+    \item \textbf{C++:}
+        Elterjedt programozási nyelv, amely felhasználható a C++ fejlesztői környezeten programok írására.
+    \item \textbf{Bluetooth:}
+        Kommunikációs protokoll, amely legfeljebb 100m távolságon képes adatot továbbítani fizikai vagy alkalmazásbeli távirányító, illetve vezérlőegység között.
+    \item \textbf{IDE:}
+        Integrated Development Environment; egy szövegszerkesztésre használható felület, amely ki van egészítve szoftverfejlesztéshez hasznos funkciókkal (pl. debugolás, refaktorálás segítése, kódkiegészítés).
+\end{itemize}
 
 \end{document}
